@@ -62,7 +62,6 @@ RUN yum -y update && \
     && rm -rf /var/cache/yum/* && \
     echo $MOTD > /etc/profile.d/motd.sh
 
-
 # create a user group and a user
 RUN groupadd --system -g ${USER_GROUP_ID} ${USER_GROUP} && \
     useradd --system --create-home --home-dir ${USER_HOME} --no-log-init -g ${USER_GROUP_ID} -u ${USER_ID} ${USER}
